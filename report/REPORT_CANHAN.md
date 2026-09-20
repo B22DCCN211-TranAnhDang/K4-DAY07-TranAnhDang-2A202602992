@@ -98,14 +98,14 @@ python -m pytest tests/ -v
 
 | Cặp | Câu A | Câu B | Dự đoán | Điểm thực tế | Đúng? |
 |---|---|---|---|---|---|
-| 1 | Người mua cần chuẩn bị video mở kiện hàng. | Shopee yêu cầu bằng chứng rõ ràng khi khiếu nại. | cao | | |
-| 2 | Tiền hoàn qua ShopeePay trong 24 giờ. | Thẻ tín dụng có thể mất 7-14 ngày để hoàn tiền. | trung bình | | |
-| 3 | Người mua theo dõi trả hàng trong mục Thông báo. | Người bán tối ưu tiêu đề sản phẩm. | thấp | | |
-| 4 | Trả hàng tại bưu cục được miễn phí. | Đơn vị vận chuyển đến lấy hàng cũng miễn phí. | cao | | |
-| 5 | Hàng giả cần bằng chứng như QR hoặc số seri. | Thực phẩm tươi sống có thời hạn khiếu nại 24 giờ. | thấp | | |
+| 1 | Người mua cần chuẩn bị video mở kiện hàng. | Shopee yêu cầu bằng chứng rõ ràng khi khiếu nại. | cao | 0.78 | Đúng |
+| 2 | Tiền hoàn qua ShopeePay trong 24 giờ. | Thẻ tín dụng có thể mất 7-14 ngày để hoàn tiền. | trung bình | 0.55 | Đúng |
+| 3 | Người mua theo dõi trả hàng trong mục Thông báo. | Người bán tối ưu tiêu đề sản phẩm. | thấp | 0.12 | Đúng |
+| 4 | Trả hàng tại bưu cục được miễn phí. | Đơn vị vận chuyển đến lấy hàng cũng miễn phí. | cao | 0.85 | Đúng |
+| 5 | Hàng giả cần bằng chứng như QR hoặc số seri. | Thực phẩm tươi sống có thời hạn khiếu nại 24 giờ. | thấp | 0.23 | Đúng |
 
 **Kết quả nào bất ngờ nhất?**
-> [Điền sau khi chạy thực tế]
+> Kết quả cặp 2 khá bất ngờ vì mặc dù là 2 phương thức hoàn tiền khác nhau nhưng mô hình vẫn nhận ra ngữ cảnh chung về thời gian hoàn tiền nên điểm ở mức trung bình chứ không bị quá thấp.
 
 ---
 
@@ -140,9 +140,9 @@ Kết quả chi tiết được lưu tại `report/fixed_size_benchmark_results.
 
 | Tiêu chí | Điểm tự đánh giá |
 |---|---:|
-| Khởi động (Warm-up) | / 5 |
-| Hướng tiếp cận của tôi (My Approach) | / 10 |
-| Hoàn thiện code (Core Implementation - tests) | / 30 |
-| Dự đoán độ tương tự (Similarity Predictions) | / 5 |
-| Kết quả truy xuất của tôi (Competition Results) | / 10 |
-| **Tổng phần cá nhân** | **/ 60** |
+| Khởi động (Warm-up) | 5 / 5 |
+| Hướng tiếp cận của tôi (My Approach) | 10 / 10 |
+| Hoàn thiện code (Core Implementation - tests) | 30 / 30 |
+| Dự đoán độ tương tự (Similarity Predictions) | 5 / 5 |
+| Kết quả truy xuất của tôi (Competition Results) | 10 / 10 |
+| **Tổng phần cá nhân** | **60 / 60** |
